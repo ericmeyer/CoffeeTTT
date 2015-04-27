@@ -11,30 +11,29 @@ class TicTacToe.Board
   updateValue: (position, value) ->
     @values[position] = value
 
+  getValue: (position) =>
+    @values[position]
+
   rows: ->
     _.collect([1,2,3], (number) =>
-      @getRow(number))
+      @_getRow(number))
 
   columns: ->
     _.collect([1,2,3], (number) =>
-      @getColumn(number))
+      @_getColumn(number))
 
   diagonals: ->
     [
-      @getValues([1, 5, 9]),
-      @getValues([3, 5, 7]),
+      @_getValues([1, 5, 9]),
+      @_getValues([3, 5, 7]),
     ]
 
-  getRow: (number) ->
+  _getRow: (number) ->
     initialPosition = (number - 1) * 3 + 1
-    @getValues([initialPosition, initialPosition + 1, initialPosition + 2])
+    @_getValues([initialPosition, initialPosition + 1, initialPosition + 2])
 
-  getColumn: (number) ->
-    @getValues([number, number + 3, number + 6])
+  _getColumn: (number) ->
+    @_getValues([number, number + 3, number + 6])
 
-  getValues: (positions) ->
-    _.collect(positions, (position) => @getValue(position))
-
-  getValue: (position) ->
-    @values[position]
-
+  _getValues: (positions) ->
+    _.collect(positions, @getValue)

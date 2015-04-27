@@ -9,14 +9,14 @@ class TicTacToe.Game
     @_board
 
   hasWinner: ->
-    _.any(@combinations(), @filledWithTheSame)
+    _.any(@_combinations(), @_filledWithTheSame)
 
   winner: ->
-    winningCombination = _.detect(@combinations(), @filledWithTheSame)
+    winningCombination = _.detect(@_combinations(), @_filledWithTheSame)
     winningCombination[0]
 
-  combinations: ->
+  _combinations: ->
     @_board.rows().concat(@_board.columns()).concat(@_board.diagonals())
 
-  filledWithTheSame: (row) ->
+  _filledWithTheSame: (row) ->
     _.uniq(row).length == 1 && not _.any(row, _.isUndefined)
