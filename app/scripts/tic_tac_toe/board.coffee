@@ -11,9 +11,6 @@ class TicTacToe.Board
   updateValue: (position, value) ->
     @values[position] = value
 
-  isGameOver: ->
-    false
-
   rows: ->
     _.collect([1,2,3], (number) =>
       @getRow(number))

@@ -25,11 +25,6 @@ describe "TicTacToe.Board", ->
       @board.updateValue(5, 'o')
       expect(@board.getValue(1)).toEqual('x')
 
-  describe "Current state of game", ->
-
-    it "starts as incomplete", ->
-      expect(@board.isGameOver()).toBeFalsy()
-
   describe "The rows", ->
     beforeEach ->
       @board.updateValue(1, 'a')
