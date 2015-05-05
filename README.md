@@ -1,6 +1,13 @@
 # Tic Tac Toe in CoffeeScript
 
 This is currently very incomplete.
+## Setup
+
+```
+npm install testem -g
+npm install
+bower install
+```
 
 ## Running the app
 
