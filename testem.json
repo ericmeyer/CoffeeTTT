@@ -3,9 +3,12 @@
   "before_tests": "grunt test",
   "src_files": [
     "app/scripts/namespace.js",
+    "app/bower_components/jquery/dist/jquery.js",
     "app/bower_components/lodash/dist/lodash.compat.js",
+    "app/bower_components/backbone/backbone.js",
     ".tmp/scripts/tic_tac_toe/board.js",
     ".tmp/scripts/tic_tac_toe/game.js",
+    ".tmp/scripts/tic_tac_toe/game_view.js",
     ".tmp/spec/**/*.js"
   ]
 }

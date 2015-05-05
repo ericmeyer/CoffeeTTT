@@ -5,6 +5,9 @@ class TicTacToe.Game
   constructor: (@options) ->
     @_board = @options.board
 
+  makeMove: (position) ->
+    console.log("makeMove: #{position}")
+
   board: ->
     @_board
 
